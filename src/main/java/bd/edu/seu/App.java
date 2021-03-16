@@ -59,8 +59,8 @@ public class App extends Application {
             start.setDisable(true);
             stop.setDisable(false);
             play.setDisable(true);
-            t  = new AudioCapture(getAudioFormat(),audInputLines.get(1),fileName1);
-            t1 = new AudioCapture1(getAudioFormat(),audInputLines.get(2),fileName2);
+            t  = new AudioCapture(getAudioFormat(),audInputLines.get(getLine1()),fileName1);
+            t1 = new AudioCapture1(getAudioFormat(),audInputLines.get(getLine2()),fileName2);
             Thread thread = new Thread(t);
             Thread thread1 = new Thread(t1);
             thread1.start();
@@ -99,6 +99,39 @@ public class App extends Application {
                 System.exit(0);
             }
         });
+    }
+
+    private int getLine1() {
+        if (audInputLines.size()==2){
+            return 0;
+        }else {
+            int value = 0;
+            for (int i = 0; i < audInputLines.size(); i++) {
+                if (audInputLines.get(i).name.toLowerCase().contains("microphone")) {
+                    System.out.println("->" + i);
+                    value = i;
+                    break;
+                }
+            }
+            return value;
+        }
+    }
+
+    private int getLine2() {
+
+        if(audInputLines.size()==2){
+            return 1;
+        }else {
+            int value = 0;
+            for (int i = 0; i < audInputLines.size(); i++) {
+                if (audInputLines.get(i).name.toLowerCase().contains("stereo")) {
+                    System.out.println("i->" + i);
+                    value = i;
+                    break;
+                }
+            }
+            return value;
+        }
     }
 
     public void RefreshInputs() {
