@@ -32,14 +32,14 @@ import java.util.stream.Collectors;
 public class App extends Application {
 
     private static Scene scene;
-    AudioCapture t;
-    AudioCapture1 t1;
-    PlayMusic music = new PlayMusic();
-    List<AudInputLine> audInputLines = new ArrayList<>();
-    Mixer.Info[] mixerInfo;
-    Random random = new Random();
-    String fileName1;
-    String fileName2;
+    private AudioCapture t;
+    private AudioCapture1 t1;
+    private PlayMusic music = new PlayMusic();
+    private List<AudInputLine> audInputLines = new ArrayList<>();
+    private Mixer.Info[] mixerInfo;
+    private Random random = new Random();
+    private String fileName1;
+    private String fileName2;
 
     @Override
     public void start(Stage stage) throws Exception{
@@ -181,6 +181,7 @@ public class App extends Application {
         AudioFormat format = new AudioFormat(sampleRate, sampleSizeInBits,
                 channels, signed, bigEndian);
         return format;
+
     }
 
 

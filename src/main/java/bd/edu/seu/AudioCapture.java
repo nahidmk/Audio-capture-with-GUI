@@ -13,17 +13,11 @@ import java.util.Random;
 public class AudioCapture extends Task<Void> {
 
 
-//    LocalDateTime localDateTime = LocalDateTime.now();
-//    Random random = new Random();
-//    String file_name =localDateTime.getDayOfMonth() + "_" + localDateTime.getMonth() + "_" + localDateTime.getHour() + "_" +
-//            localDateTime.getMinute() + "_" + localDateTime.getSecond() + "_" + localDateTime.getYear() + "_" + random.nextInt(10000) + ".wav";
-
-//    File wavFile = new File("Recorder/"+file_name);
-    AudioFileFormat.Type fileType = AudioFileFormat.Type.WAVE;
-    TargetDataLine line1;
-    AudioFormat format;
-    AudInputLine audInputLine;
-    String fileName;
+    private AudioFileFormat.Type fileType = AudioFileFormat.Type.WAVE;
+    private TargetDataLine line1;
+    private AudioFormat format;
+    private AudInputLine audInputLine;
+    private String fileName;
 
     public AudioCapture(AudioFormat audioFormat, AudInputLine audInputLine, String fileName1) {
         this.format = audioFormat;
