@@ -33,7 +33,7 @@ public class App extends Application {
 
     private static Scene scene;
     private AudioCapture t;
-    private AudioCapture1 t1;
+    private AudioCapture t1;
     private PlayMusic music = new PlayMusic();
     private List<AudInputLine> audInputLines = new ArrayList<>();
     private Mixer.Info[] mixerInfo;
@@ -59,8 +59,9 @@ public class App extends Application {
             start.setDisable(true);
             stop.setDisable(false);
             play.setDisable(true);
+            System.out.println("Recording Start");
             t  = new AudioCapture(getAudioFormat(),audInputLines.get(getLine1()),fileName1);
-            t1 = new AudioCapture1(getAudioFormat(),audInputLines.get(getLine2()),fileName2);
+            t1 = new AudioCapture(getAudioFormat(),audInputLines.get(getLine2()),fileName2);
             Thread thread = new Thread(t);
             Thread thread1 = new Thread(t1);
             thread1.start();
@@ -70,6 +71,7 @@ public class App extends Application {
             start.setDisable(false);
             stop.setDisable(true);
             play.setDisable(false);
+            System.out.println("Recording Finish..");
             t.finish();
             t1.finish();
             t.cancel();

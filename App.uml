@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>bd.edu.seu.App</OriginalElement>
+  <nodes>
+    <node x="205.70462962962966" y="0.0">bd.edu.seu.AudInputLine</node>
+    <node x="554.0" y="181.0">javafx.application.Application</node>
+    <node x="360.0" y="325.5">bd.edu.seu.PlayMusic</node>
+    <node x="0.0" y="258.5">bd.edu.seu.AudioCapture</node>
+    <node x="235.28148148148148" y="616.0">bd.edu.seu.App</node>
+    <node x="602.3962962962963" y="0.0">javafx.application.Application.Parameters</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="bd.edu.seu.App" target="bd.edu.seu.PlayMusic">
+      <point x="25.66666666666663" y="-204.0" />
+      <point x="376.4481481481481" y="566.0" />
+      <point x="403.5" y="566.0" />
+      <point x="-43.5" y="38.0" />
+    </edge>
+    <edge source="bd.edu.seu.App" target="bd.edu.seu.AudioCapture">
+      <point x="-77.0" y="-204.0" />
+      <point x="273.7814814814815" y="586.0" />
+      <point x="237.75" y="586.0" />
+      <point x="79.25" y="105.0" />
+    </edge>
+    <edge source="javafx.application.Application.Parameters" target="javafx.application.Application">
+      <point x="45.5" y="60.5" />
+      <point x="738.8962962962963" y="161.0" />
+      <point x="792.5" y="161.0" />
+      <point x="79.5" y="-182.5" />
+    </edge>
+    <edge source="bd.edu.seu.AudioCapture" target="bd.edu.seu.AudInputLine">
+      <point x="79.25" y="-105.0" />
+      <point x="237.75" y="161.0" />
+      <point x="248.9046296296297" y="161.0" />
+      <point x="-28.799999999999955" y="60.5" />
+    </edge>
+    <edge source="javafx.application.Application" target="javafx.application.Application.Parameters">
+      <point x="-79.5" y="-182.5" />
+      <point x="633.5" y="161.0" />
+      <point x="647.8962962962963" y="161.0" />
+      <point x="-45.5" y="60.5" />
+    </edge>
+    <edge source="bd.edu.seu.App" target="bd.edu.seu.AudInputLine">
+      <point x="0.0" y="-204.0" />
+      <point x="350.7814814814815" y="596.0" />
+      <point x="349.5" y="596.0" />
+      <point x="349.5" y="141.0" />
+      <point x="335.3046296296297" y="141.0" />
+      <point x="57.60000000000002" y="60.5" />
+    </edge>
+    <edge source="bd.edu.seu.App" target="javafx.application.Application">
+      <point x="77.0" y="-204.0" />
+      <point x="427.7814814814815" y="586.0" />
+      <point x="633.5" y="586.0" />
+      <point x="-79.5" y="182.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5466804979253111" x="449.0377695479855" y="534.9071063632143" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

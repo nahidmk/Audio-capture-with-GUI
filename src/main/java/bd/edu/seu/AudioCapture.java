@@ -43,9 +43,7 @@ public class AudioCapture extends Task<Void> {
             line1.start();
 
             File wavFile = new File("Recorder/"+fileName);
-            System.out.println("Start capturing from microphone...");
             AudioInputStream ais = new AudioInputStream(line1);
-            System.out.println("Start recording from microphone...");
             AudioSystem.write(ais, fileType, wavFile);
 
         }
@@ -61,6 +59,5 @@ public class AudioCapture extends Task<Void> {
     {
         line1.stop();
         line1.close();
-        System.out.println("Finished recording from microphone");
     }
 }
